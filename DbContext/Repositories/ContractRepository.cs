@@ -39,7 +39,7 @@ namespace Infrastructura.Repositories
                 ")", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(Contract.CompanyId), entity.CompanyId));
-            command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate);
+            command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Price), entity.Price));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Valid), entity.Valid));
 
@@ -74,7 +74,7 @@ namespace Infrastructura.Repositories
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
             command.Parameters.Add(new SqlParameter(nameof(Contract.CompanyId), entity.CompanyId));
-            command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate);
+            command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Price), entity.Price));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Valid), entity.Valid));
 
