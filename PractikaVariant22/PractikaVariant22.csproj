@@ -46,16 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AuthContext.cs" />
+    <Compile Include="AuthWindows\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AuthWindows\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthWindows\RegistryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthWindows\RegistryForm.Designer.cs">
+      <DependentUpon>RegistryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RoleWindows\UserWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleWindows\UserWindow.Designer.cs">
+      <DependentUpon>UserWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuthWindows\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthWindows\RegistryForm.resx">
+      <DependentUpon>RegistryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +82,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RoleWindows\UserWindow.resx">
+      <DependentUpon>UserWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\PractikaVariant22.RoleWindows.UserWindow.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,13 +100,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DbContext\Infrastructura.csproj">
-      <Project>{2EB8C628-47A5-4066-B2F6-5D75D258DB4E}</Project>
-      <Name>Infrastructura</Name>
+    <ProjectReference Include="..\DatabaseContext\DatabaseContext.csproj">
+      <Project>{9D1533D2-E1C2-4415-A110-2D44751BE1EE}</Project>
+      <Name>DatabaseContext</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{AED950A2-C671-46F0-804C-3D8DEC906BBA}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{C7693DA2-0BC5-4185-A629-E4FA745C71D9}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

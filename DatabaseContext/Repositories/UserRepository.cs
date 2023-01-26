@@ -20,10 +20,11 @@ namespace Infrastructura.Repositories
 
         public async Task CreateAsync(User entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand("INSERT INTO" +
-                $" [dbo].[Useres] " +
+                $" [dbo].[Users] " +
                 "(" +
                 $"[{nameof(User.Name)}]," +
                 $"[{nameof(User.Email)}]," +
@@ -48,7 +49,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"DELETE FROM [dbo].[Useres] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
+            var command = new SqlCommand($"DELETE FROM [dbo].[Users] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
 
@@ -59,9 +60,10 @@ namespace Infrastructura.Repositories
 
         public async Task UpdateAsync(int id, User entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"UPDATE [dbo].[Useres]" +
+            var command = new SqlCommand($"UPDATE [dbo].[Users]" +
                 " SET" +
                 $" [{nameof(User.Name)}] = @{nameof(User.Name)}," +
                 $" [{nameof(User.Email)}] = @{nameof(User.Email)}," +
@@ -83,7 +85,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand("SELECT * FROM [dbo].[Useres]", dbConnection);
+            var command = new SqlCommand("SELECT * FROM [dbo].[Users]", dbConnection);
             SqlDataReader reader = await command.ExecuteReaderAsync();
 
             List<User> result = new List<User>();
@@ -110,7 +112,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"SELECT * FROM [dbo].[Useres] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
+            var command = new SqlCommand($"SELECT * FROM [dbo].[Users] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
 

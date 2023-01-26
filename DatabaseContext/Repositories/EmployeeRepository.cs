@@ -20,6 +20,7 @@ namespace Infrastructura.Repositories
 
         public async Task CreateAsync(Employee entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand("INSERT INTO" +
@@ -68,6 +69,7 @@ namespace Infrastructura.Repositories
 
         public async Task UpdateAsync(int id, Employee entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand($"UPDATE [dbo].[Employees]" +

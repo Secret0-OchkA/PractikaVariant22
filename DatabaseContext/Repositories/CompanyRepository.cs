@@ -20,12 +20,13 @@ namespace Infrastructura.Repositories
 
         public async Task CreateAsync(Company entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand("INSERT INTO" +
                 $" [dbo].[Companyes] " +
                 "(" +
-                $"[{nameof(Company.CoutnryCode)}]," +
+                $"[{nameof(Company.CountryCode)}]," +
                 $"[{nameof(Company.City)}]," +
                 $"[{nameof(Company.Address)}]," +
                 $"[{nameof(Company.Phone)}]," +
@@ -34,7 +35,7 @@ namespace Infrastructura.Repositories
                 ")" +
                 "VALUES " +
                 "(" +
-                $"@{nameof(Company.CoutnryCode)}," +
+                $"@{nameof(Company.CountryCode)}," +
                 $"@{nameof(Company.City)}," +
                 $"@{nameof(Company.Address)}," +
                 $"@{nameof(Company.Phone)}," +
@@ -42,7 +43,7 @@ namespace Infrastructura.Repositories
                 $"@{nameof(Company.Site)}" +
                 ")", dbConnection);
 
-            command.Parameters.Add(new SqlParameter(nameof(Company.CoutnryCode), entity.CoutnryCode));
+            command.Parameters.Add(new SqlParameter(nameof(Company.CountryCode), entity.CountryCode));
             command.Parameters.Add(new SqlParameter(nameof(Company.City), entity.City));
             command.Parameters.Add(new SqlParameter(nameof(Company.Address), entity.Address));
             command.Parameters.Add(new SqlParameter(nameof(Company.Phone), entity.Phone));
@@ -68,11 +69,12 @@ namespace Infrastructura.Repositories
 
         public async Task UpdateAsync(int id, Company entity)
         {
+            entity.Validate();
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand($"UPDATE [dbo].[Companyes]" +
                 " SET" +
-                $" [{nameof(Company.CoutnryCode)}] = @{nameof(Company.CoutnryCode)}," +
+                $" [{nameof(Company.CountryCode)}] = @{nameof(Company.CountryCode)}," +
                 $" [{nameof(Company.City)}] = @{nameof(Company.City)}," +
                 $" [{nameof(Company.Address)}] = @{nameof(Company.Address)}," +
                 $" [{nameof(Company.Phone)}] = @{nameof(Company.Phone)}," +
@@ -82,7 +84,7 @@ namespace Infrastructura.Repositories
                 $" WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
-            command.Parameters.Add(new SqlParameter(nameof(Company.CoutnryCode), entity.CoutnryCode));
+            command.Parameters.Add(new SqlParameter(nameof(Company.CountryCode), entity.CountryCode));
             command.Parameters.Add(new SqlParameter(nameof(Company.City), entity.City));
             command.Parameters.Add(new SqlParameter(nameof(Company.Address), entity.Address));
             command.Parameters.Add(new SqlParameter(nameof(Company.Phone), entity.Phone));
@@ -108,7 +110,7 @@ namespace Infrastructura.Repositories
                 var value = new Company();
 
                 value.Id = reader.GetInt32(0);
-                value.CoutnryCode = reader.GetInt32(1);
+                value.CountryCode = reader.GetInt32(1);
                 value.City = reader.GetString(2);
                 value.Address = reader.GetString(3);
                 value.Phone = reader.GetString(4);
@@ -139,7 +141,7 @@ namespace Infrastructura.Repositories
             await reader.ReadAsync();
 
             result.Id = reader.GetInt32(0);
-            result.CoutnryCode = reader.GetInt32(1);
+            result.CountryCode = reader.GetInt32(1);
             result.City = reader.GetString(2);
             result.Address = reader.GetString(3);
             result.Phone = reader.GetString(4);

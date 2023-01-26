@@ -127,14 +127,13 @@ CREATE TABLE [dbo].[EmployeesContracts]
     ON UPDATE CASCADE
 );
 GO
-
--- Create a new table called '[User]' in schema '[dbo]'
+-- Create a new table called '[Users]' in schema '[dbo]'
 -- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[User]', 'U') IS NOT NULL
-DROP TABLE [dbo].[User]
+IF OBJECT_ID('[dbo].[Users]', 'U') IS NOT NULL
+DROP TABLE [dbo].[Users]
 GO
 -- Create the table in the specified schema
-CREATE TABLE [dbo].[User]
+CREATE TABLE [dbo].[Users]
 (
     [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- Primary Key column
     [Name] NVARCHAR(50) NOT NULL,
