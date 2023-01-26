@@ -23,7 +23,7 @@ namespace Infrastructura.Repositories
             await dbConnection.OpenAsync();
 
             var command = new SqlCommand("INSERT INTO" +
-                $" [dbo].[Deliveriees] " +
+                $" [dbo].[Deliveries] " +
                 "(" +
                 $"[{nameof(Deliverie.ContractId)}]," +
                 $"[{nameof(Deliverie.EquipmentType)}]," +
@@ -51,7 +51,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"DELETE FROM [dbo].[Deliveriees] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
+            var command = new SqlCommand($"DELETE FROM [dbo].[Deliveries] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
 
@@ -64,7 +64,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"UPDATE [dbo].[Deliveriees]" +
+            var command = new SqlCommand($"UPDATE [dbo].[Deliveries]" +
                 " SET" +
                 $" [{nameof(Deliverie.ContractId)}] = @{nameof(Deliverie.ContractId)}," +
                 $" [{nameof(Deliverie.EquipmentType)}] = @{nameof(Deliverie.EquipmentType)}," +
@@ -87,7 +87,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand("SELECT * FROM [dbo].[Deliveriees]", dbConnection);
+            var command = new SqlCommand("SELECT * FROM [dbo].[Deliveries]", dbConnection);
             SqlDataReader reader = await command.ExecuteReaderAsync();
 
             List<Deliverie> result = new List<Deliverie>();
@@ -115,7 +115,7 @@ namespace Infrastructura.Repositories
         {
             await dbConnection.OpenAsync();
 
-            var command = new SqlCommand($"SELECT * FROM [dbo].[Deliveriees] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
+            var command = new SqlCommand($"SELECT * FROM [dbo].[Deliveries] WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
 
