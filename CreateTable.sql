@@ -1,32 +1,24 @@
 
--- Create a new table called '[EmployeesContracts]' in schema '[dbo]'
--- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[EmployeesContracts]', 'U') IS NOT NULL
-DROP TABLE [dbo].[EmployeesContracts]
-GO
 
 -- Create a new table called '[Deliveries]' in schema '[dbo]'
 -- Drop the table if it already exists
 IF OBJECT_ID('[dbo].[Deliveries]', 'U') IS NOT NULL
 DROP TABLE [dbo].[Deliveries]
 GO
-
+-- Create a new table called '[Contacts]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[Contacts]', 'U') IS NOT NULL
+DROP TABLE [dbo].[Contacts]
+GO
 -- Create a new table called '[Employees]' in schema '[dbo]'
 -- Drop the table if it already exists
 IF OBJECT_ID('[dbo].[Employees]', 'U') IS NOT NULL
 DROP TABLE [dbo].[Employees]
 GO
-
 -- Create a new table called '[Departments]' in schema '[dbo]'
 -- Drop the table if it already exists
 IF OBJECT_ID('[dbo].[Departments]', 'U') IS NOT NULL
 DROP TABLE [dbo].[Departments]
-GO
-
--- Create a new table called '[Contacts]' in schema '[dbo]'
--- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[Contacts]', 'U') IS NOT NULL
-DROP TABLE [dbo].[Contacts]
 GO
 
 -- Create a new table called '[Companyes]' in schema '[dbo]'
@@ -86,10 +78,14 @@ CREATE TABLE [dbo].[Contacts]
     [DateCreate] DATETIME2(7) NOT NULL,
     [Price] MONEY NOT NULL,
     [Valid] BIT NOT NULL DEFAULT 0,
+    [EmployeeId] INT NOT NULL,
     -- Specify more columns here
     CONSTRAINT FK_Contracts_Companyes FOREIGN KEY ([CompanyId]) REFERENCES [dbo].[Companyes]([Id])
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT FK_Contracts_Employees FOREIGN KEY ([EmployeeId]) REFERENCES [dbo].[Employees]([Id])
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
 );
 GO
 
@@ -110,23 +106,6 @@ CREATE TABLE [dbo].[Deliveries]
     ON UPDATE CASCADE
 );
 GO
-
-
--- Create the table in the specified schema
-CREATE TABLE [dbo].[EmployeesContracts]
-(
-    [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- Primary Key column
-    [EmployeeId] INT NOT NULL,
-    [ContractId] INT NOT NULL,
-    -- Specify more columns here
-    CONSTRAINT FK_EmployeesContracs_Employees FOREIGN KEY ([EmployeeId]) REFERENCES [dbo].[Employees]([Id])
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-    CONSTRAINT FK_EmployeesContracs_Contracs FOREIGN KEY ([ContractId]) REFERENCES [dbo].[Employees]([Id])
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
-);
-GO
 -- Create a new table called '[Users]' in schema '[dbo]'
 -- Drop the table if it already exists
 IF OBJECT_ID('[dbo].[Users]', 'U') IS NOT NULL
@@ -139,6 +118,7 @@ CREATE TABLE [dbo].[Users]
     [Name] NVARCHAR(50) NOT NULL,
     [Email] NVARCHAR(50) NOT NULL,
     [Password] NVARCHAR(50) NOT NULL,
+    [Role] INT NOT NULL
     -- Specify more columns here
 );
 GO

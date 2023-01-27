@@ -60,6 +60,7 @@ namespace Domain
         public DateTime DateCreate { get; set; }
         public decimal Price { get; set; }
         public bool Valid { get; set; }
+        public int EmployeeId { get; set; }
 
         public void Validate()
         {
@@ -87,6 +88,7 @@ namespace Domain
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int Role { get; set; }
 
         public void Validate()
         {

@@ -47,7 +47,6 @@
     <Compile Include="Repositories\ContractRepository.cs" />
     <Compile Include="Repositories\DeliverieRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
-    <Compile Include="Repositories\EmployeeContractsRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repository.cs" />

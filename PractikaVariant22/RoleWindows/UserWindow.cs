@@ -31,6 +31,9 @@ namespace PractikaVariant22.RoleWindows
 
             comboBox_Contract.DisplayMember = nameof(Contract.DateCreate);
             comboBox_Contract.ValueMember = nameof(IHaveId.Id);
+
+            comboBox_Employees.DisplayMember = nameof(Employee.Name);
+            comboBox_Employees.ValueMember = nameof(IHaveId.Id);
         }
 
         private void UserWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,6 +65,7 @@ namespace PractikaVariant22.RoleWindows
         {
             IEnumerable<Employee> employees = await DbContext.Employees.GetAllAsync();
             dataGridView_Emp.DataSource = employees;
+            comboBox_Employees.DataSource = employees;
 
             IEnumerable<Department> list = await departmentRepository.GetAllAsync();
             comboBox_Employee_Department.DataSource = list;
@@ -86,7 +90,8 @@ namespace PractikaVariant22.RoleWindows
                 CompanyId = (int)comboBox_Company.SelectedValue,
                 DateCreate = dateTimePicker_DateCreate.Value,
                 Price = numericUpDown_Emp_Price.Value,
-                Valid = false
+                Valid = false,
+                EmployeeId = (int)comboBox_Employees.SelectedValue
             };
             await DbContext.Contracts.CreateAsync(contract);
         }

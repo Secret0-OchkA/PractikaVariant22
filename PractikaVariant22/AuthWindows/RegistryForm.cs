@@ -52,10 +52,11 @@ namespace PractikaVariant22.AuthWindows
             string email = textBox_Email.Text;
             string password = textBox_Password.Text;
             string confirmPassword = textBox_ConfirmPassword.Text;
+            int role = comboBox_Role.SelectedIndex;
 
             if (!password.Equals(confirmPassword)) return;
 
-            bool res = await authService.Registry(new User() { Name = name, Email = email, Password = password });
+            bool res = await authService.Registry(new User() { Name = name, Email = email, Password = password, Role = role});
             if (!res) return;
 
             this.Close();

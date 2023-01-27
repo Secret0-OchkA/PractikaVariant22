@@ -29,20 +29,23 @@ namespace Infrastructura.Repositories
                 $"[{nameof(Contract.CompanyId)}]," +
                 $"[{nameof(Contract.DateCreate)}]," +
                 $"[{nameof(Contract.Price)}]," +
-                $"[{nameof(Contract.Valid)}]" +
+                $"[{nameof(Contract.Valid)}]," +
+                $"[{nameof(Contract.EmployeeId)}]" +
                 ")" +
                 "VALUES " +
                 "(" +
                 $"@{nameof(Contract.CompanyId)}," +
                 $"@{nameof(Contract.DateCreate)}," +
                 $"@{nameof(Contract.Price)}," +
-                $"@{nameof(Contract.Valid)}" +
+                $"@{nameof(Contract.Valid)}," +
+                $"@{nameof(Contract.EmployeeId)}" +
                 ")", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(Contract.CompanyId), entity.CompanyId));
             command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Price), entity.Price));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Valid), entity.Valid));
+            command.Parameters.Add(new SqlParameter(nameof(Contract.EmployeeId), entity.EmployeeId));
 
             await command.ExecuteNonQueryAsync();
             dbConnection.Close();
@@ -71,7 +74,8 @@ namespace Infrastructura.Repositories
                 $" [{nameof(Contract.CompanyId)}] = @{nameof(Contract.CompanyId)}," +
                 $" [{nameof(Contract.DateCreate)}] = @{nameof(Contract.DateCreate)}," +
                 $" [{nameof(Contract.Price)}] = @{nameof(Contract.Price)}," +
-                $" [{nameof(Contract.Valid)}] = @{nameof(Contract.Valid)}" +
+                $" [{nameof(Contract.Valid)}] = @{nameof(Contract.Valid)}," +
+                $" [{nameof(Contract.EmployeeId)}] = @{nameof(Contract.EmployeeId)}" +
                 $" WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
@@ -79,6 +83,7 @@ namespace Infrastructura.Repositories
             command.Parameters.Add(new SqlParameter(nameof(Contract.DateCreate), entity.DateCreate));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Price), entity.Price));
             command.Parameters.Add(new SqlParameter(nameof(Contract.Valid), entity.Valid));
+            command.Parameters.Add(new SqlParameter(nameof(Contract.EmployeeId), entity.EmployeeId));
 
             await command.ExecuteNonQueryAsync();
 
@@ -103,6 +108,7 @@ namespace Infrastructura.Repositories
                 value.DateCreate = reader.GetDateTime(2);
                 value.Price = reader.GetDecimal(3);
                 value.Valid = reader.GetBoolean(4);
+                value.EmployeeId = reader.GetInt32(5);
 
                 result.Add(value);
             }
@@ -132,6 +138,7 @@ namespace Infrastructura.Repositories
             result.DateCreate = reader.GetDateTime(2);
             result.Price = reader.GetDecimal(3);
             result.Valid = reader.GetBoolean(4);
+            result.EmployeeId = reader.GetInt32(5);
 
             reader.Close();
             dbConnection.Close();

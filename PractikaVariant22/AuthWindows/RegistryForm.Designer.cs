@@ -38,6 +38,8 @@
             this.textBox_ConfirmPassword = new System.Windows.Forms.TextBox();
             this.button_Registre = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
+            this.comboBox_Role = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_Email
@@ -110,7 +112,7 @@
             // 
             // button_Registre
             // 
-            this.button_Registre.Location = new System.Drawing.Point(24, 128);
+            this.button_Registre.Location = new System.Drawing.Point(24, 161);
             this.button_Registre.Name = "button_Registre";
             this.button_Registre.Size = new System.Drawing.Size(75, 23);
             this.button_Registre.TabIndex = 8;
@@ -120,7 +122,7 @@
             // 
             // button_Cancel
             // 
-            this.button_Cancel.Location = new System.Drawing.Point(112, 128);
+            this.button_Cancel.Location = new System.Drawing.Point(112, 161);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(75, 23);
             this.button_Cancel.TabIndex = 9;
@@ -128,11 +130,33 @@
             this.button_Cancel.UseVisualStyleBackColor = true;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
+            // comboBox_Role
+            // 
+            this.comboBox_Role.FormattingEnabled = true;
+            this.comboBox_Role.Items.AddRange(new object[] {
+            "User",
+            "Reporter"});
+            this.comboBox_Role.Location = new System.Drawing.Point(112, 121);
+            this.comboBox_Role.Name = "comboBox_Role";
+            this.comboBox_Role.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_Role.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(74, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Role";
+            // 
             // RegistryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(241, 213);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBox_Role);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_Registre);
             this.Controls.Add(this.label4);
@@ -163,5 +187,7 @@
         private System.Windows.Forms.TextBox textBox_ConfirmPassword;
         private System.Windows.Forms.Button button_Registre;
         private System.Windows.Forms.Button button_Cancel;
+        private System.Windows.Forms.ComboBox comboBox_Role;
+        private System.Windows.Forms.Label label5;
     }
 }

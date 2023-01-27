@@ -30,9 +30,15 @@ namespace PractikaVariant22.AuthWindows
 
             AuthContext.curUser = user;
 
+            Form userForm = null;
+            switch(user.Role)
+            {
+                case 0: userForm = new UserWindow(this); break;
+                case 1: userForm = new ReporWindow(this); break;
+            }
+
             this.Hide();
-            Form form = new UserWindow(this);
-            form.Show();
+            userForm.Show();
         }
 
         private void button_Registry_Click(object sender, EventArgs e)

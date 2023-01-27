@@ -28,18 +28,21 @@ namespace Infrastructura.Repositories
                 "(" +
                 $"[{nameof(User.Name)}]," +
                 $"[{nameof(User.Email)}]," +
-                $"[{nameof(User.Password)}]" +
+                $"[{nameof(User.Password)}]," +
+                $"[{nameof(User.Role)}]" +
                 ")" +
                 "VALUES " +
                 "(" +
                 $"@{nameof(User.Name)}," +
                 $"@{nameof(User.Email)}," +
-                $"@{nameof(User.Password)}" +
+                $"@{nameof(User.Password)}," +
+                $"@{nameof(User.Role)}" +
                 ")", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(User.Name), entity.Name));
             command.Parameters.Add(new SqlParameter(nameof(User.Email), entity.Email));
             command.Parameters.Add(new SqlParameter(nameof(User.Password), entity.Password));
+            command.Parameters.Add(new SqlParameter(nameof(User.Role), entity.Role));
 
             await command.ExecuteNonQueryAsync();
             dbConnection.Close();
@@ -67,15 +70,15 @@ namespace Infrastructura.Repositories
                 " SET" +
                 $" [{nameof(User.Name)}] = @{nameof(User.Name)}," +
                 $" [{nameof(User.Email)}] = @{nameof(User.Email)}," +
-                $" [{nameof(User.Password)}] = @{nameof(User.Password)}" +
-
+                $" [{nameof(User.Password)}] = @{nameof(User.Password)}," +
+                $" [{nameof(User.Role)}] = @{nameof(User.Role)}" +
                 $" WHERE [{nameof(IHaveId.Id)}] = @{nameof(IHaveId.Id)}", dbConnection);
 
             command.Parameters.Add(new SqlParameter(nameof(IHaveId.Id), id));
             command.Parameters.Add(new SqlParameter(nameof(User.Name), entity.Name));
             command.Parameters.Add(new SqlParameter(nameof(User.Email), entity.Email));
             command.Parameters.Add(new SqlParameter(nameof(User.Password), entity.Password));
-
+            command.Parameters.Add(new SqlParameter(nameof(User.Role), entity.Role));
             await command.ExecuteNonQueryAsync();
 
             dbConnection.Close();
@@ -98,6 +101,7 @@ namespace Infrastructura.Repositories
                 value.Name = reader.GetString(1);
                 value.Email = reader.GetString(2);
                 value.Password = reader.GetString(3);
+                value.Role = reader.GetInt32(4);
 
                 result.Add(value);
             }
@@ -126,6 +130,7 @@ namespace Infrastructura.Repositories
             result.Name = reader.GetString(1);
             result.Email = reader.GetString(2);
             result.Password = reader.GetString(3);
+            result.Role = reader.GetInt32(4);
 
             reader.Close();
             dbConnection.Close();

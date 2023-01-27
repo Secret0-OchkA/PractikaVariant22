@@ -30,9 +30,38 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.maskedTextBox_Phone = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox_Site = new System.Windows.Forms.TextBox();
+            this.textBox_Email = new System.Windows.Forms.TextBox();
+            this.textBox_Address = new System.Windows.Forms.TextBox();
+            this.textBox_City = new System.Windows.Forms.TextBox();
+            this.numericUpDown_CoutryCode = new System.Windows.Forms.NumericUpDown();
+            this.dataGridView_Company = new System.Windows.Forms.DataGridView();
             this.button_Create_Company = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView_Deliveries = new System.Windows.Forms.DataGridView();
+            this.button_Create_Delivery = new System.Windows.Forms.Button();
+            this.comboBox_Contract = new System.Windows.Forms.ComboBox();
+            this.textBox_Equipment = new System.Windows.Forms.TextBox();
+            this.textBox_Description = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dataGridView_Contracts = new System.Windows.Forms.DataGridView();
+            this.button_CreateContract = new System.Windows.Forms.Button();
+            this.numericUpDown_ContractPrice = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker_DateCreate = new System.Windows.Forms.DateTimePicker();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.comboBox_Company = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView_Emp = new System.Windows.Forms.DataGridView();
             this.numericUpDown_Emp_Salary = new System.Windows.Forms.NumericUpDown();
@@ -51,50 +80,23 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.textBox_DepartmentName = new System.Windows.Forms.TextBox();
             this.button_Create_Department = new System.Windows.Forms.Button();
-            this.comboBox_Company = new System.Windows.Forms.ComboBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker_DateCreate = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown_ContractPrice = new System.Windows.Forms.NumericUpDown();
-            this.button_CreateContract = new System.Windows.Forms.Button();
-            this.dataGridView_Company = new System.Windows.Forms.DataGridView();
-            this.numericUpDown_CoutryCode = new System.Windows.Forms.NumericUpDown();
-            this.textBox_City = new System.Windows.Forms.TextBox();
-            this.textBox_Address = new System.Windows.Forms.TextBox();
-            this.textBox_Email = new System.Windows.Forms.TextBox();
-            this.textBox_Site = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.maskedTextBox_Phone = new System.Windows.Forms.MaskedTextBox();
-            this.dataGridView_Contracts = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox_Description = new System.Windows.Forms.TextBox();
-            this.textBox_Equipment = new System.Windows.Forms.TextBox();
-            this.comboBox_Contract = new System.Windows.Forms.ComboBox();
-            this.button_Create_Delivery = new System.Windows.Forms.Button();
-            this.dataGridView_Deliveries = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.comboBox_Employees = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CoutryCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Company)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Deliveries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Contracts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ContractPrice)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Emp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Emp_Salary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Emp_Price)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Emp_Month)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ContractPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Company)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CoutryCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Contracts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Deliveries)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -136,6 +138,116 @@
             this.tabPage1.Text = "Companyes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // maskedTextBox_Phone
+            // 
+            this.maskedTextBox_Phone.Location = new System.Drawing.Point(90, 245);
+            this.maskedTextBox_Phone.Mask = "(999) 000-0000";
+            this.maskedTextBox_Phone.Name = "maskedTextBox_Phone";
+            this.maskedTextBox_Phone.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox_Phone.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(58, 296);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 13);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Site";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(51, 273);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Email";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(45, 247);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Phone";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(38, 221);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Address";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(59, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "City";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Coutry code";
+            // 
+            // textBox_Site
+            // 
+            this.textBox_Site.Location = new System.Drawing.Point(89, 296);
+            this.textBox_Site.Name = "textBox_Site";
+            this.textBox_Site.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Site.TabIndex = 9;
+            // 
+            // textBox_Email
+            // 
+            this.textBox_Email.Location = new System.Drawing.Point(89, 270);
+            this.textBox_Email.Name = "textBox_Email";
+            this.textBox_Email.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Email.TabIndex = 8;
+            // 
+            // textBox_Address
+            // 
+            this.textBox_Address.Location = new System.Drawing.Point(89, 218);
+            this.textBox_Address.Name = "textBox_Address";
+            this.textBox_Address.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Address.TabIndex = 6;
+            // 
+            // textBox_City
+            // 
+            this.textBox_City.Location = new System.Drawing.Point(89, 192);
+            this.textBox_City.Name = "textBox_City";
+            this.textBox_City.Size = new System.Drawing.Size(100, 20);
+            this.textBox_City.TabIndex = 5;
+            // 
+            // numericUpDown_CoutryCode
+            // 
+            this.numericUpDown_CoutryCode.Location = new System.Drawing.Point(89, 165);
+            this.numericUpDown_CoutryCode.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_CoutryCode.Name = "numericUpDown_CoutryCode";
+            this.numericUpDown_CoutryCode.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_CoutryCode.TabIndex = 4;
+            // 
+            // dataGridView_Company
+            // 
+            this.dataGridView_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Company.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView_Company.Name = "dataGridView_Company";
+            this.dataGridView_Company.Size = new System.Drawing.Size(776, 150);
+            this.dataGridView_Company.TabIndex = 3;
+            // 
             // button_Create_Company
             // 
             this.button_Create_Company.Location = new System.Drawing.Point(22, 322);
@@ -158,6 +270,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.comboBox_Employees);
             this.tabPage2.Controls.Add(this.dataGridView_Deliveries);
             this.tabPage2.Controls.Add(this.button_Create_Delivery);
             this.tabPage2.Controls.Add(this.comboBox_Contract);
@@ -181,6 +295,140 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Contracts";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_Deliveries
+            // 
+            this.dataGridView_Deliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Deliveries.Location = new System.Drawing.Point(268, 134);
+            this.dataGridView_Deliveries.Name = "dataGridView_Deliveries";
+            this.dataGridView_Deliveries.Size = new System.Drawing.Size(240, 282);
+            this.dataGridView_Deliveries.TabIndex = 15;
+            // 
+            // button_Create_Delivery
+            // 
+            this.button_Create_Delivery.Location = new System.Drawing.Point(284, 104);
+            this.button_Create_Delivery.Name = "button_Create_Delivery";
+            this.button_Create_Delivery.Size = new System.Drawing.Size(190, 23);
+            this.button_Create_Delivery.TabIndex = 14;
+            this.button_Create_Delivery.Text = "Create delivery";
+            this.button_Create_Delivery.UseVisualStyleBackColor = true;
+            this.button_Create_Delivery.Click += new System.EventHandler(this.button_Create_Delivery_Click);
+            // 
+            // comboBox_Contract
+            // 
+            this.comboBox_Contract.FormattingEnabled = true;
+            this.comboBox_Contract.Location = new System.Drawing.Point(328, 77);
+            this.comboBox_Contract.Name = "comboBox_Contract";
+            this.comboBox_Contract.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Contract.TabIndex = 13;
+            // 
+            // textBox_Equipment
+            // 
+            this.textBox_Equipment.Location = new System.Drawing.Point(328, 25);
+            this.textBox_Equipment.Name = "textBox_Equipment";
+            this.textBox_Equipment.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Equipment.TabIndex = 12;
+            // 
+            // textBox_Description
+            // 
+            this.textBox_Description.Location = new System.Drawing.Point(328, 51);
+            this.textBox_Description.Name = "textBox_Description";
+            this.textBox_Description.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Description.TabIndex = 11;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(275, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(47, 13);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Contract";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(265, 54);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Description";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(265, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(57, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Equipment";
+            // 
+            // dataGridView_Contracts
+            // 
+            this.dataGridView_Contracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Contracts.Location = new System.Drawing.Point(12, 134);
+            this.dataGridView_Contracts.Name = "dataGridView_Contracts";
+            this.dataGridView_Contracts.Size = new System.Drawing.Size(240, 282);
+            this.dataGridView_Contracts.TabIndex = 7;
+            // 
+            // button_CreateContract
+            // 
+            this.button_CreateContract.Location = new System.Drawing.Point(12, 104);
+            this.button_CreateContract.Name = "button_CreateContract";
+            this.button_CreateContract.Size = new System.Drawing.Size(190, 23);
+            this.button_CreateContract.TabIndex = 6;
+            this.button_CreateContract.Text = "Create contract";
+            this.button_CreateContract.UseVisualStyleBackColor = true;
+            this.button_CreateContract.Click += new System.EventHandler(this.button_CreateContract_Click);
+            // 
+            // numericUpDown_ContractPrice
+            // 
+            this.numericUpDown_ContractPrice.Location = new System.Drawing.Point(66, 54);
+            this.numericUpDown_ContractPrice.Name = "numericUpDown_ContractPrice";
+            this.numericUpDown_ContractPrice.Size = new System.Drawing.Size(136, 20);
+            this.numericUpDown_ContractPrice.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 56);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Price";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Date";
+            // 
+            // dateTimePicker_DateCreate
+            // 
+            this.dateTimePicker_DateCreate.Location = new System.Drawing.Point(66, 30);
+            this.dateTimePicker_DateCreate.Name = "dateTimePicker_DateCreate";
+            this.dateTimePicker_DateCreate.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker_DateCreate.TabIndex = 2;
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(9, 6);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(51, 13);
+            this.Label7.TabIndex = 1;
+            this.Label7.Text = "Company";
+            // 
+            // comboBox_Company
+            // 
+            this.comboBox_Company.FormattingEnabled = true;
+            this.comboBox_Company.Location = new System.Drawing.Point(66, 3);
+            this.comboBox_Company.Name = "comboBox_Company";
+            this.comboBox_Company.Size = new System.Drawing.Size(136, 21);
+            this.comboBox_Company.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -350,250 +598,6 @@
             this.button_Create_Department.UseVisualStyleBackColor = true;
             this.button_Create_Department.Click += new System.EventHandler(this.button_Create_Department_Click);
             // 
-            // comboBox_Company
-            // 
-            this.comboBox_Company.FormattingEnabled = true;
-            this.comboBox_Company.Location = new System.Drawing.Point(66, 27);
-            this.comboBox_Company.Name = "comboBox_Company";
-            this.comboBox_Company.Size = new System.Drawing.Size(136, 21);
-            this.comboBox_Company.TabIndex = 0;
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(9, 30);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(51, 13);
-            this.Label7.TabIndex = 1;
-            this.Label7.Text = "Company";
-            // 
-            // dateTimePicker_DateCreate
-            // 
-            this.dateTimePicker_DateCreate.Location = new System.Drawing.Point(66, 54);
-            this.dateTimePicker_DateCreate.Name = "dateTimePicker_DateCreate";
-            this.dateTimePicker_DateCreate.Size = new System.Drawing.Size(136, 20);
-            this.dateTimePicker_DateCreate.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Date";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 80);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Price";
-            // 
-            // numericUpDown_ContractPrice
-            // 
-            this.numericUpDown_ContractPrice.Location = new System.Drawing.Point(66, 78);
-            this.numericUpDown_ContractPrice.Name = "numericUpDown_ContractPrice";
-            this.numericUpDown_ContractPrice.Size = new System.Drawing.Size(136, 20);
-            this.numericUpDown_ContractPrice.TabIndex = 5;
-            // 
-            // button_CreateContract
-            // 
-            this.button_CreateContract.Location = new System.Drawing.Point(12, 104);
-            this.button_CreateContract.Name = "button_CreateContract";
-            this.button_CreateContract.Size = new System.Drawing.Size(190, 23);
-            this.button_CreateContract.TabIndex = 6;
-            this.button_CreateContract.Text = "Create contract";
-            this.button_CreateContract.UseVisualStyleBackColor = true;
-            this.button_CreateContract.Click += new System.EventHandler(this.button_CreateContract_Click);
-            // 
-            // dataGridView_Company
-            // 
-            this.dataGridView_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Company.Location = new System.Drawing.Point(8, 6);
-            this.dataGridView_Company.Name = "dataGridView_Company";
-            this.dataGridView_Company.Size = new System.Drawing.Size(776, 150);
-            this.dataGridView_Company.TabIndex = 3;
-            // 
-            // numericUpDown_CoutryCode
-            // 
-            this.numericUpDown_CoutryCode.Location = new System.Drawing.Point(89, 165);
-            this.numericUpDown_CoutryCode.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_CoutryCode.Name = "numericUpDown_CoutryCode";
-            this.numericUpDown_CoutryCode.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_CoutryCode.TabIndex = 4;
-            // 
-            // textBox_City
-            // 
-            this.textBox_City.Location = new System.Drawing.Point(89, 192);
-            this.textBox_City.Name = "textBox_City";
-            this.textBox_City.Size = new System.Drawing.Size(100, 20);
-            this.textBox_City.TabIndex = 5;
-            // 
-            // textBox_Address
-            // 
-            this.textBox_Address.Location = new System.Drawing.Point(89, 218);
-            this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Address.TabIndex = 6;
-            // 
-            // textBox_Email
-            // 
-            this.textBox_Email.Location = new System.Drawing.Point(89, 270);
-            this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Email.TabIndex = 8;
-            // 
-            // textBox_Site
-            // 
-            this.textBox_Site.Location = new System.Drawing.Point(89, 296);
-            this.textBox_Site.Name = "textBox_Site";
-            this.textBox_Site.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Site.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 167);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Coutry code";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 195);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "City";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 221);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Address";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(45, 247);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Phone";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(51, 273);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 13);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Email";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(58, 296);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 13);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Site";
-            // 
-            // maskedTextBox_Phone
-            // 
-            this.maskedTextBox_Phone.Location = new System.Drawing.Point(90, 245);
-            this.maskedTextBox_Phone.Mask = "(999) 000-0000";
-            this.maskedTextBox_Phone.Name = "maskedTextBox_Phone";
-            this.maskedTextBox_Phone.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox_Phone.TabIndex = 16;
-            // 
-            // dataGridView_Contracts
-            // 
-            this.dataGridView_Contracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Contracts.Location = new System.Drawing.Point(12, 134);
-            this.dataGridView_Contracts.Name = "dataGridView_Contracts";
-            this.dataGridView_Contracts.Size = new System.Drawing.Size(240, 282);
-            this.dataGridView_Contracts.TabIndex = 7;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(265, 25);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Equipment";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(265, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "Description";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(275, 80);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 13);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "Contract";
-            // 
-            // textBox_Description
-            // 
-            this.textBox_Description.Location = new System.Drawing.Point(328, 51);
-            this.textBox_Description.Name = "textBox_Description";
-            this.textBox_Description.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Description.TabIndex = 11;
-            // 
-            // textBox_Equipment
-            // 
-            this.textBox_Equipment.Location = new System.Drawing.Point(328, 25);
-            this.textBox_Equipment.Name = "textBox_Equipment";
-            this.textBox_Equipment.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Equipment.TabIndex = 12;
-            // 
-            // comboBox_Contract
-            // 
-            this.comboBox_Contract.FormattingEnabled = true;
-            this.comboBox_Contract.Location = new System.Drawing.Point(328, 77);
-            this.comboBox_Contract.Name = "comboBox_Contract";
-            this.comboBox_Contract.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_Contract.TabIndex = 13;
-            // 
-            // button_Create_Delivery
-            // 
-            this.button_Create_Delivery.Location = new System.Drawing.Point(284, 104);
-            this.button_Create_Delivery.Name = "button_Create_Delivery";
-            this.button_Create_Delivery.Size = new System.Drawing.Size(190, 23);
-            this.button_Create_Delivery.TabIndex = 14;
-            this.button_Create_Delivery.Text = "Create delivery";
-            this.button_Create_Delivery.UseVisualStyleBackColor = true;
-            this.button_Create_Delivery.Click += new System.EventHandler(this.button_Create_Delivery_Click);
-            // 
-            // dataGridView_Deliveries
-            // 
-            this.dataGridView_Deliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Deliveries.Location = new System.Drawing.Point(268, 134);
-            this.dataGridView_Deliveries.Name = "dataGridView_Deliveries";
-            this.dataGridView_Deliveries.Size = new System.Drawing.Size(240, 282);
-            this.dataGridView_Deliveries.TabIndex = 15;
-            // 
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
@@ -602,6 +606,23 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Reports";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Employees
+            // 
+            this.comboBox_Employees.FormattingEnabled = true;
+            this.comboBox_Employees.Location = new System.Drawing.Point(66, 77);
+            this.comboBox_Employees.Name = "comboBox_Employees";
+            this.comboBox_Employees.Size = new System.Drawing.Size(136, 21);
+            this.comboBox_Employees.TabIndex = 16;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(9, 80);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 13);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Employee";
             // 
             // UserWindow
             // 
@@ -616,8 +637,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CoutryCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Company)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Deliveries)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Contracts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ContractPrice)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Emp)).EndInit();
@@ -626,11 +652,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Emp_Month)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ContractPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Company)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CoutryCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Contracts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Deliveries)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,5 +711,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataGridView_Deliveries;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBox_Employees;
     }
 }
