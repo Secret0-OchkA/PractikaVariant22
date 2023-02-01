@@ -44,6 +44,7 @@ namespace PractikaVariant22.RoleWindows
         private async void button_Create_Department_Click(object sender, EventArgs e)
         {
             await departmentRepository.CreateAsync(new Department() { Name = textBox_DepartmentName.Text });
+            UserWindow_Load(sender, e);
         }
 
         private async void button_Create_Employee_Click(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace PractikaVariant22.RoleWindows
             };
 
             await DbContext.Employees.CreateAsync(employee);
+            UserWindow_Load(sender, e);
         }
 
         private async void UserWindow_Load(object sender, EventArgs e)
@@ -94,6 +96,7 @@ namespace PractikaVariant22.RoleWindows
                 EmployeeId = (int)comboBox_Employees.SelectedValue
             };
             await DbContext.Contracts.CreateAsync(contract);
+            UserWindow_Load(sender, e);
         }
 
         private void button_Exit_Click(object sender, EventArgs e)
@@ -114,6 +117,8 @@ namespace PractikaVariant22.RoleWindows
                 Site = textBox_Site.Text,
             };
             await DbContext.Companyes.CreateAsync(company);
+
+            UserWindow_Load(sender, e);
         }
 
         private async void button_Create_Delivery_Click(object sender, EventArgs e)
@@ -126,6 +131,7 @@ namespace PractikaVariant22.RoleWindows
                 EmployeeId = AuthContext.curUser.Id,
             };
             await DbContext.Deliveries.CreateAsync(deliverie);
+            UserWindow_Load(sender, e);
         }
     }
 }

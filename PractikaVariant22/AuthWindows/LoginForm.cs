@@ -26,7 +26,11 @@ namespace PractikaVariant22.AuthWindows
             string password = textBox_Password.Text;
 
             User user = await authService.Login(email, password);
-            if (user == null) return;
+            if (user == null)
+            {
+                MessageBox.Show("Incorrect login or password");
+                return;
+            }
 
             AuthContext.curUser = user;
 

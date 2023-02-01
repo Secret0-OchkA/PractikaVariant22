@@ -7,6 +7,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Collections.Specialized.BitVector32;
+using System.Text.RegularExpressions;
 
 namespace Domain
 {
@@ -17,7 +18,6 @@ namespace Domain
 
         public void Validate()
         {
-             
         }
     }
 
@@ -33,7 +33,14 @@ namespace Domain
 
         public void Validate()
         {
-             
+            if (DepartmentId <= 0) throw new ValidateException("Invalid department");
+            if (Name == null) throw new ValidateException("Invalid Name");
+            if (Name.Equals(string.Empty)) throw new ValidateException("Emppty name");
+            if (Position == null) throw new ValidateException("null Position");
+            if (Position.Equals(string.Empty)) throw new ValidateException("Empty Position");
+            if (Salary <= 0) throw new ValidateException("Salary <= 0");
+            if (Price <= 0) throw new ValidateException("Price <= 0");
+            if (Month <= 0) throw new ValidateException("Month <= 0");
         }
     }
 
@@ -49,7 +56,9 @@ namespace Domain
 
         public void Validate()
         {
-             
+            Regex emailReg = new Regex(@"^\w.\@\w.\.\w.");
+
+            if (!emailReg.IsMatch(Email)) throw new ValidateException("invalid email");
         }
     }
 
@@ -64,7 +73,9 @@ namespace Domain
 
         public void Validate()
         {
-             
+            if (CompanyId <= 0) throw new ValidateException("Invalid Company");
+            if (EmployeeId <= 0) throw new ValidateException("Invalid Employee");
+            if (Price <= 0) throw new ValidateException("Price <= 0");
         }
     }
 
@@ -92,7 +103,14 @@ namespace Domain
 
         public void Validate()
         {
-             
+            if (Name == null) throw new ValidateException("empty name");
+            if (Name.Equals(string.Empty)) throw new ValidateException("empty name");
+
+            if (Email == null) throw new ValidateException("empty email");
+            if (Email.Equals(string.Empty)) throw new ValidateException("empty email");
+
+            if (Password == null) throw new ValidateException("empty password");
+            if (Password.Equals(string.Empty)) throw new ValidateException("empty password");
         }
     }
 

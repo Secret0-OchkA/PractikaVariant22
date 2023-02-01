@@ -10,4 +10,9 @@ namespace Domain
     {
         void Validate();
     }
+
+    public class ValidateException : Exception 
+    {
+        public ValidateException(string message) : base(message) { }
+    }
 }
